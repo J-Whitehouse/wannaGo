@@ -11,14 +11,14 @@ import GoogleSignIn
 
 class SignInViewController: UIViewController {
     let signInConfig = GIDConfiguration.init(clientID:
-        "712916505831-6s10r85nodjvij241h5u9djknbtj1etq.apps.googleusercontent.com")
+        "851357286012-oq6hoi244jf01is14e4skdqnis16llkr.apps.googleusercontent.com")
     
     //MARK: Outlets and actions
     
     @IBOutlet weak var signInButton: GIDSignInButton!
     
     @IBAction func signIn(_ sender: Any){
-        print("you have joined the cult uwu")
+        print("you have joined the cult")
         GIDSignIn.sharedInstance.signIn(with: signInConfig, presenting: self) {
             user, error in
             
@@ -35,7 +35,7 @@ class SignInViewController: UIViewController {
     }
     
     @IBAction func singOut(_ sender: Any) {
-        print("Dont leave me owo")
+        print("Dont leave me")
         GIDSignIn.sharedInstance.signOut()
     }
     

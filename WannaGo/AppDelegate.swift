@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import GoogleSignIn
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,8 +16,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
             // Override point for customization after application launch.
             FirebaseApp.configure()
+            
+            GIDSignIn.sharedInstance.restorePreviousSignIn { user, error in
+                if error != nil || user == nil {
+                    //show signed out state
+                } else {
+                    //show if user is signed in
+                }
+                
+            }
             return true
-    }
+        }
+        
+        //MARK: Google Sign in
+        func application(_ app: UIApplication,
+                         open url: URL,
+                         options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+            var handled: Bool
+            handled = GIDSignIn.sharedInstance.handle(url)
+            
+            if handled {
+                return true
+            }
+            return false
+        }
 
 
     // MARK: UISceneSession Lifecycle

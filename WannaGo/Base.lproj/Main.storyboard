@@ -73,7 +73,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
-                                    <action selector="signIn:" destination="rf6-tC-1pJ" eventType="valueChanged" id="R6M-kA-Cgn"/>
+                                    <action selector="signIn:" destination="rf6-tC-1pJ" eventType="touchUpInside" id="VU9-qF-77H"/>
                                 </connections>
                             </view>
                         </subviews>
@@ -82,6 +82,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="mRb-x5-D4U"/>
                     <connections>
+                        <outlet property="signInButton" destination="qsZ-WL-Ier" id="hng-PE-Viy"/>
                         <segue destination="qSK-mb-hBh" kind="show" identifier="viewPlaces" id="f2B-ma-0Dq"/>
                     </connections>
                 </viewController>

@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Firebase
+import GoogleSignIn
 
 class PlacesTableViewController: UITableViewController {
     

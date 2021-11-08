@@ -8,6 +8,7 @@
 import UIKit
 import MapKit
 import CoreLocation
+import GoogleSignIn
 
 class AddPlaceViewController: UIViewController, CLLocationManagerDelegate {
     
@@ -21,7 +22,40 @@ class AddPlaceViewController: UIViewController, CLLocationManagerDelegate {
         
         determineCurrentLocation()
         
+        let gestureRecognizer = UILongPressGestureRecognizer(target: self, action:#selector(handleLongTap))
+        mapView.addGestureRecognizer(gestureRecognizer)
+        
     }
+    
+    //MARK: Custom Functions
+    @objc func handleLongTap(gestureRecognizer: UILongPressGestureRecognizer) {
+        
+        if gestureRecognizer.state == .began {
+            let locationInView = gestureRecognizer.location(in: mapView)
+            let locationOnMap = mapView.convert(locationInView, toCoordinateFrom: mapView)
+            let location = CLLocation(latitude: locationOnMap.latitude, longitude: locationOnMap.longitude)
+            
+            let geocoder = CLGeocoder()
+            geocoder.reverseGeocodeLocation(location) { (placemarks, error) in
+                if let places = placemarks {
+                    for place in places {
+                        print("Found placemark \(place.name) in \(place.administrativeArea), \(place.country) at address \(place.postalCode)")
+                        
+                        self.addAnnotation(location: locationOnMap, title: place.name, subtitle: place.administrativeArea)
+                    }
+                }
+            }
+        }
+    }
+    
+    func addAnnotation(location: CLLocationCoordinate2D, title: String?, subtitle: String?){
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = location
+        annotation.title = title ?? ""
+        annotation.subtitle = subtitle ?? ""
+        self.mapView.addAnnotation(annotation)
+    }
+    
     
     //MARK: Instance Methods
     func determineCurrentLocation(){
