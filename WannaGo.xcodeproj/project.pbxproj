@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		3037C9552739A6BE001F06F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3037C9542739A6BE001F06F2 /* AppDelegate.swift */; };
 		3037C9572739A6BE001F06F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3037C9562739A6BE001F06F2 /* SceneDelegate.swift */; };
-		3037C9592739A6BE001F06F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3037C9582739A6BE001F06F2 /* ViewController.swift */; };
+		3037C9592739A6BE001F06F2 /* AddPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3037C9582739A6BE001F06F2 /* AddPlaceViewController.swift */; };
 		3037C95C2739A6BF001F06F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3037C95A2739A6BF001F06F2 /* Main.storyboard */; };
 		3037C95E2739A6C8001F06F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3037C95D2739A6C8001F06F2 /* Assets.xcassets */; };
 		3037C9612739A6C8001F06F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3037C95F2739A6C8001F06F2 /* LaunchScreen.storyboard */; };
+		3037C96A2739A75A001F06F2 /* PlacesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3037C9692739A75A001F06F2 /* PlacesTableViewController.swift */; };
+		3037C96E2739AF37001F06F2 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3037C96D2739AF37001F06F2 /* Place.swift */; };
+		3037C9712739AF4C001F06F2 /* PlaceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3037C9702739AF4C001F06F2 /* PlaceService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3037C9512739A6BE001F06F2 /* WannaGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WannaGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3037C9542739A6BE001F06F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3037C9562739A6BE001F06F2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3037C9582739A6BE001F06F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3037C9582739A6BE001F06F2 /* AddPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlaceViewController.swift; sourceTree = "<group>"; };
 		3037C95B2739A6BF001F06F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3037C95D2739A6C8001F06F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3037C9602739A6C8001F06F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3037C9622739A6C8001F06F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3037C9692739A75A001F06F2 /* PlacesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesTableViewController.swift; sourceTree = "<group>"; };
+		3037C96D2739AF37001F06F2 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		3037C9702739AF4C001F06F2 /* PlaceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +64,10 @@
 			children = (
 				3037C9542739A6BE001F06F2 /* AppDelegate.swift */,
 				3037C9562739A6BE001F06F2 /* SceneDelegate.swift */,
-				3037C9582739A6BE001F06F2 /* ViewController.swift */,
+				3037C9582739A6BE001F06F2 /* AddPlaceViewController.swift */,
+				3037C96D2739AF37001F06F2 /* Place.swift */,
+				3037C9702739AF4C001F06F2 /* PlaceService.swift */,
+				3037C9692739A75A001F06F2 /* PlacesTableViewController.swift */,
 				3037C95A2739A6BF001F06F2 /* Main.storyboard */,
 				3037C95D2739A6C8001F06F2 /* Assets.xcassets */,
 				3037C95F2739A6C8001F06F2 /* LaunchScreen.storyboard */,
@@ -137,9 +146,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3037C9592739A6BE001F06F2 /* ViewController.swift in Sources */,
+				3037C9592739A6BE001F06F2 /* AddPlaceViewController.swift in Sources */,
+				3037C9712739AF4C001F06F2 /* PlaceService.swift in Sources */,
+				3037C96A2739A75A001F06F2 /* PlacesTableViewController.swift in Sources */,
 				3037C9552739A6BE001F06F2 /* AppDelegate.swift in Sources */,
 				3037C9572739A6BE001F06F2 /* SceneDelegate.swift in Sources */,
+				3037C96E2739AF37001F06F2 /* Place.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
