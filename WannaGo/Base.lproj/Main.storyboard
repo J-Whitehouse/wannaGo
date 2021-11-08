@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -57,7 +58,36 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m0V-LD-jhp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="347.82608695652175" y="56.919642857142854"/>
+            <point key="canvasLocation" x="448" y="57"/>
+        </scene>
+        <!--Sign In View Controller-->
+        <scene sceneID="6ed-cT-Pdp">
+            <objects>
+                <viewController id="rf6-tC-1pJ" customClass="SignInViewController" customModule="WannaGo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="t2U-d6-tV0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qsZ-WL-Ier" customClass="GIDSignInButton">
+                                <rect key="frame" x="87" y="384" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <action selector="signIn:" destination="rf6-tC-1pJ" eventType="valueChanged" id="R6M-kA-Cgn"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="LEK-2j-wMa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="mRb-x5-D4U"/>
+                    <connections>
+                        <segue destination="qSK-mb-hBh" kind="show" identifier="viewPlaces" id="f2B-ma-0Dq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vRt-F3-N1l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-323" y="57"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="M87-Pu-eOM">
@@ -70,12 +100,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="qSK-mb-hBh" kind="relationship" relationship="rootViewController" id="6Rh-aQ-oo3"/>
+                        <segue destination="rf6-tC-1pJ" kind="relationship" relationship="rootViewController" id="Onu-lB-bI0"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bl7-pY-E3A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-562.31884057971024" y="56.919642857142854"/>
+            <point key="canvasLocation" x="-1084" y="57"/>
         </scene>
     </scenes>
     <resources>
