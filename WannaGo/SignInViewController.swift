@@ -13,7 +13,7 @@ class SignInViewController: UIViewController {
     let signInConfig = GIDConfiguration.init(clientID:
         "851357286012-oq6hoi244jf01is14e4skdqnis16llkr.apps.googleusercontent.com")
     
-    //MARK: Outlets and actions
+    //MARK: Outlets and Actions
     
     @IBOutlet weak var signInButton: GIDSignInButton!
     
@@ -39,7 +39,7 @@ class SignInViewController: UIViewController {
         GIDSignIn.sharedInstance.signOut()
     }
     
-    //MARK: LIFecycle Functions
+    //MARK: Lifecycle Functions
     override func viewDidLoad() {
         super.viewDidLoad()
         

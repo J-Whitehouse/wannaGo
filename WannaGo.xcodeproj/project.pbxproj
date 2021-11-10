@@ -21,6 +21,7 @@
 		3037C97E2739B893001F06F2 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 3037C97D2739B893001F06F2 /* GoogleSignIn */; };
 		3037C9812739B90B001F06F2 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3037C9802739B90B001F06F2 /* SignInViewController.swift */; };
 		30ABE0EF2739D9E8002BCE22 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 30ABE0EE2739D9E8002BCE22 /* GoogleService-Info.plist */; };
+		30B78507273C787500C0FA07 /* PlaceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30B78506273C787500C0FA07 /* PlaceDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		3037C9702739AF4C001F06F2 /* PlaceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceService.swift; sourceTree = "<group>"; };
 		3037C9802739B90B001F06F2 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		30ABE0EE2739D9E8002BCE22 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		30B78506273C787500C0FA07 /* PlaceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				3037C96D2739AF37001F06F2 /* Place.swift */,
 				3037C9702739AF4C001F06F2 /* PlaceService.swift */,
 				3037C9692739A75A001F06F2 /* PlacesTableViewController.swift */,
+				30B78506273C787500C0FA07 /* PlaceDetailViewController.swift */,
 				3037C95A2739A6BF001F06F2 /* Main.storyboard */,
 				3037C95D2739A6C8001F06F2 /* Assets.xcassets */,
 				3037C95F2739A6C8001F06F2 /* LaunchScreen.storyboard */,
@@ -169,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3037C9812739B90B001F06F2 /* SignInViewController.swift in Sources */,
+				30B78507273C787500C0FA07 /* PlaceDetailViewController.swift in Sources */,
 				3037C9592739A6BE001F06F2 /* AddPlaceViewController.swift in Sources */,
 				3037C9712739AF4C001F06F2 /* PlaceService.swift in Sources */,
 				3037C96A2739A75A001F06F2 /* PlacesTableViewController.swift in Sources */,
