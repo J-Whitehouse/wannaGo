@@ -4,7 +4,7 @@
 //
 //  Created by Whitehouse, Jarret M on 11/10/21.
 //
-/*
+
 import UIKit
 import Firebase
 import GoogleSignIn
@@ -61,4 +61,4 @@ class PlaceDetailViewController: UIViewController {
     }
     
 }
-*/
+

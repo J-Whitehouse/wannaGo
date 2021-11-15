@@ -5,19 +5,20 @@
 //  Created by Whitehouse, Jarret M on 11/8/21.
 //
 
-/*
+
 import UIKit
 import Firebase
 import CoreLocation
 import MapKit
 
 struct appPlace {
-    let longitude: CLLocationCoordinate2D
-    let latitude: CLLocationCoordinate2D
+    let PlaceID: String?
     let PlaceName: String?
     let PlaceAdminArea: String?
     let PlaceCountry: String?
-    let PlacePostalCode: Int?
+    let PlacePostalCode: String?
+    let Longitude: String?
+    let Latitude: String?
 }
 
 extension appPlace {
@@ -29,12 +30,13 @@ extension appPlace {
     
             
             places.append(appPlace(
-                PlaceName: document.documentID,
+                PlaceID: document.documentID,
+                PlaceName: document["PlaceName"] as? String ?? "",
                 PlaceAdminArea: document["AdminArea"] as? String ?? "",
-                PlaceCountry: document["Country"] as? String ?? ""
-                //PlacePostalCode: document["PostalCode"] as? Int ?? "",
-                //PlaceLongitude: document["Longitude"] as? String ?? "",
-                //PlaceLatitude: document["Latitude"] as? String ?? ""
+                PlaceCountry: document["Country"] as? String ?? "",
+                PlacePostalCode: document["PostalCode"] as? String ?? "",
+                Longitude: document["Longitude"] as? String ?? "",
+                Latitude: document["Latitude"] as? String ?? ""
                 ))
                             
         }
@@ -46,11 +48,18 @@ extension appPlace {
         
 
         
-        return appPlace(placeID: document.documentID,
-                       data: document["taskdata"] as? String ?? "",
+        return appPlace(
+                        PlaceID: document.documentID,
+                        PlaceName: document["PlaceName"] as? String ?? "",
+                        PlaceAdminArea: document["AdminArea"] as? String ?? "",
+                        PlaceCountry: document["Country"] as? String ?? "",
+                        PlacePostalCode: document["PostalCode"] as? String ?? "",
+                        Longitude: document["Longitude"] as? String ?? "",
+                        Latitude: document["Latitude"] as? String ?? ""
+                        )
                       
         
     }
     
 }
- */
+ 

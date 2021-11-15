@@ -11,7 +11,7 @@ import Firebase
 import GoogleSignIn
 
 class PlacesTableViewController: UITableViewController {
-    /*
+    
     //MARK: Attributes
         private var service: PlaceService?
         
@@ -64,34 +64,16 @@ class PlacesTableViewController: UITableViewController {
         
         override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             //Create an instance if tge UITableViewCell with default appearance
-            let cell = tableView.dequeueReusableCell(withIdentifier: "UIPlacesViewCell", for: indexPath)
+            let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
             
             
-            cell.textLabel?.text = places[indexPath.row].placeData
+            cell.textLabel?.text = places[indexPath.row].PlaceName
+            cell.detailTextLabel?.text = places[indexPath.row].PlaceAdminArea
             
         
             return cell
         }
-        
-        // MARK: Segue
-            
-            override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-                if segue.identifier == "placeDetailSegue" {
-                    
-                    // Get a reference to the destination view controller
-                    let detailView = segue.destination as! PlaceDetailViewController
-                    
-                    // Figure out which table cell was clicked
-                    if let indexPath = self.tableView.indexPathForSelectedRow {
-                        
-                        // Get the string ID of the selected task
-                        let placeID = places[indexPath.row].placeID!
-                        
-                        // Set the task ID on the destination view controller
-                        detailView.placeID = placeID
-                    }
-                }
-            }
- */
+    
+ 
 }
 

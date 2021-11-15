@@ -26,6 +26,19 @@ class AddPlaceViewController: UIViewController, CLLocationManagerDelegate {
         let gestureRecognizer = UILongPressGestureRecognizer(target: self, action:#selector(handleLongTap))
         mapView.addGestureRecognizer(gestureRecognizer)
         
+        /*
+        service = PlaceService()
+        var collection = ""
+        if let user = GIDSignIn.sharedInstance.currentUser {
+            collection = user.userID!
+        }
+        service?.get(collectionID: collection) {
+            places in
+            self.allPlaces = places
+        }
+         
+        */
+        
     }
     
     //MARK: Custom Functions
@@ -56,7 +69,7 @@ class AddPlaceViewController: UIViewController, CLLocationManagerDelegate {
                                 }
                                 
                                 ref = db.collection(collection).addDocument(data: [
-                                    "PaceName": place.name,
+                                    "PlaceName": place.name,
                                     "PlaceAdminArea": place.administrativeArea,
                                     "PlaceCountry": place.country,
                                     "PlacePostalCode": place.postalCode,
