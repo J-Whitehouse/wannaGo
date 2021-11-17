@@ -13,6 +13,24 @@ import Firebase
 
 class AddPlaceViewController: UIViewController, CLLocationManagerDelegate {
     
+    private var service: PlaceService?
+    
+    private var allPlaces = [appPlace]() {
+        didSet {
+            DispatchQueue.main.async {
+                self.places = self.allPlaces
+            }
+        }
+    }
+    
+    var places = [appPlace]() {
+        didSet {
+            DispatchQueue.main.async {
+
+            }
+        }
+    }
+    
     //MARK: Outlets and Actions
     @IBOutlet var mapView: MKMapView!
     
@@ -26,18 +44,13 @@ class AddPlaceViewController: UIViewController, CLLocationManagerDelegate {
         let gestureRecognizer = UILongPressGestureRecognizer(target: self, action:#selector(handleLongTap))
         mapView.addGestureRecognizer(gestureRecognizer)
         
-        /*
-        service = PlaceService()
-        var collection = ""
-        if let user = GIDSignIn.sharedInstance.currentUser {
-            collection = user.userID!
+        for place in places {
+            
+            let coordinate = CLLocationCoordinate2D(latitude: Double(place.Latitude), longitude: Double(place.Longitude))
+            
+            self.addAnnotation(location: coordinate, title: place.PlaceName, subtitle: place.PlaceAdminArea)
         }
-        service?.get(collectionID: collection) {
-            places in
-            self.allPlaces = places
-        }
-         
-        */
+        
         
     }
     
@@ -60,7 +73,6 @@ class AddPlaceViewController: UIViewController, CLLocationManagerDelegate {
                         //MARK: Atrributes
                             let db = Firestore.firestore()
                                 
-                                //Add a document to the collection named "cities"
                                 var ref: DocumentReference? = nil
                                 
                                 var collection = ""
@@ -86,7 +98,7 @@ class AddPlaceViewController: UIViewController, CLLocationManagerDelegate {
                                 //Dismiss the view controller
                                 self.navigationController?.popViewController(animated: true)
                                 self.dismiss(animated: true, completion: nil)
-                    
+                        
                     }
                 }
             }

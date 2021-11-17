@@ -7,10 +7,12 @@
 
 
 import UIKit
-import Firebase
+import MapKit
+import CoreLocation
 import GoogleSignIn
+import Firebase
 
-class PlacesTableViewController: UITableViewController {
+class PlacesTableViewController: UITableViewController, CLLocationManagerDelegate {
     
     //MARK: Attributes
         private var service: PlaceService?
@@ -74,6 +76,35 @@ class PlacesTableViewController: UITableViewController {
         
             return cell
         }
+    
+    func addAnnotation(location: CLLocationCoordinate2D, title: String?, subtitle: String?){
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = location
+        annotation.title = title ?? ""
+        annotation.subtitle = subtitle ?? ""
+        AddPlaceViewController.addAnnotation(annotation)
+    }
+    
+    // MARK: Segue
+        
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if segue.identifier == "AddNewPlaceSegue" {
+                
+                // Get a reference to the destination view controller
+                let mapView = segue.destination as! AddPlaceViewController
+                
+                /* --------------------------------- This is supposed to be the annotation code --------------------------- */
+                
+                for place in places {
+                    let coordinate = CLLocationCoordinate2D(latitude: Double(place.Latitude), longitude: Double(place.Longitude))
+                    
+                    self.addAnnotation(location: coordinate, title: place.PlaceName, subtitle: place.PlaceAdminArea)
+                }
+                
+            }
+        }
+    
+    
     
  
 }
