@@ -68,6 +68,7 @@ class PlacesTableViewController: UITableViewController {
             
             
             cell.textLabel?.text = places[indexPath.row].PlaceName
+            print(places[indexPath.row].PlaceAdminArea)
             cell.detailTextLabel?.text = places[indexPath.row].PlaceAdminArea
             
         

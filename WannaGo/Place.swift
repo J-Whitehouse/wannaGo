@@ -32,9 +32,9 @@ extension appPlace {
             places.append(appPlace(
                 PlaceID: document.documentID,
                 PlaceName: document["PlaceName"] as? String ?? "",
-                PlaceAdminArea: document["AdminArea"] as? String ?? "",
-                PlaceCountry: document["Country"] as? String ?? "",
-                PlacePostalCode: document["PostalCode"] as? String ?? "",
+                PlaceAdminArea: document["PlaceAdminArea"] as? String ?? "",
+                PlaceCountry: document["PlaceCountry"] as? String ?? "",
+                PlacePostalCode: document["PlacePostalCode"] as? String ?? "",
                 Longitude: document["Longitude"] as? String ?? "",
                 Latitude: document["Latitude"] as? String ?? ""
                 ))
@@ -51,9 +51,9 @@ extension appPlace {
         return appPlace(
                         PlaceID: document.documentID,
                         PlaceName: document["PlaceName"] as? String ?? "",
-                        PlaceAdminArea: document["AdminArea"] as? String ?? "",
-                        PlaceCountry: document["Country"] as? String ?? "",
-                        PlacePostalCode: document["PostalCode"] as? String ?? "",
+                        PlaceAdminArea: document["PlaceAdminArea"] as? String ?? "",
+                        PlaceCountry: document["PlaceCountry"] as? String ?? "",
+                        PlacePostalCode: document["PlacePostalCode"] as? String ?? "",
                         Longitude: document["Longitude"] as? String ?? "",
                         Latitude: document["Latitude"] as? String ?? ""
                         )
