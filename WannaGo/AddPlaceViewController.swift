@@ -44,12 +44,13 @@ class AddPlaceViewController: UIViewController, CLLocationManagerDelegate {
         let gestureRecognizer = UILongPressGestureRecognizer(target: self, action:#selector(handleLongTap))
         mapView.addGestureRecognizer(gestureRecognizer)
         
-        for place in places {
+        /*for place in places {
             
             let coordinate = CLLocationCoordinate2D(latitude: Double(place.Latitude), longitude: Double(place.Longitude))
             
             self.addAnnotation(location: coordinate, title: place.PlaceName, subtitle: place.PlaceAdminArea)
         }
+ */
         
         
     }

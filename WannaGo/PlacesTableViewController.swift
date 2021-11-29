@@ -77,13 +77,14 @@ class PlacesTableViewController: UITableViewController, CLLocationManagerDelegat
             return cell
         }
     
-    func addAnnotation(location: CLLocationCoordinate2D, title: String?, subtitle: String?){
+    /*func addAnnotation(location: CLLocationCoordinate2D, title: String?, subtitle: String?){
         let annotation = MKPointAnnotation()
         annotation.coordinate = location
         annotation.title = title ?? ""
         annotation.subtitle = subtitle ?? ""
-        AddPlaceViewController.addAnnotation(annotation)
+        ViewController.addAnnotation(annotation)
     }
+ */
     
     // MARK: Segue
         
@@ -94,13 +95,13 @@ class PlacesTableViewController: UITableViewController, CLLocationManagerDelegat
                 let mapView = segue.destination as! AddPlaceViewController
                 
                 /* --------------------------------- This is supposed to be the annotation code --------------------------- */
-                
+                /*
                 for place in places {
                     let coordinate = CLLocationCoordinate2D(latitude: Double(place.Latitude), longitude: Double(place.Longitude))
                     
                     self.addAnnotation(location: coordinate, title: place.PlaceName, subtitle: place.PlaceAdminArea)
                 }
-                
+                */
             }
         }
     
